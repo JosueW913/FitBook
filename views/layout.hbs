@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+
+    <nav>
+
+      <a href="/">Home</a>
+      <a href="/workouts">Workouts</a>
+      <a href="/workouts/create">Add Workout</a>
+
+      <form action="/auth/signup" method="get">
+        <button type="submit">Signup</button>
+      </form>
+      <form action="/auth/logout" method="get">
+        <button type="submit">LogIn</button>
+      </form>
+      <form action="/auth/logout" method="get">
+        <button type="submit">LogOut</button>
+      </form>
+
+    </nav>
+
+
+
+    {{{body}}}
+  </body>
+</html>

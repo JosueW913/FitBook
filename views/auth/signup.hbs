@@ -1,0 +1,23 @@
+<div >
+  <h2>Signup for FitBook</h2>
+  <form action="/auth/signup" method="POST">
+
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username"/>
+
+    <label for="email">Email</label>
+    <input id="email" type="text" name="email"/>
+
+    <label for="password">Password</label>
+    <input id="password" type="password" name="password"/>
+
+    <label for="fullName">Full Name</label>
+    <input id="fullName" type="text" name="fullName"/>
+
+    <button type="submit">Signup</button>
+
+    {{#if errorMessage}}
+      <p>{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
