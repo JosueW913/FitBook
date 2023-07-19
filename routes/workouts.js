@@ -52,6 +52,8 @@ router.get('/details/:workoutId', isLoggedIn, (req, res, next) => {
     
     const routines = req.session.routines
 
+    console.log("routine in session", req.session.routines)
+
     Workout.findById(req.params.workoutId)
     // .populate({
     //     path: 'comments', 
@@ -60,7 +62,7 @@ router.get('/details/:workoutId', isLoggedIn, (req, res, next) => {
     .populate('username')
     .then((foundWorkout) => {
         console.log("Found Workout Routine", {exercise: foundWorkout, routines})
-        res.render('workouts/workout-details.hbs', foundWorkout)
+        res.render('workouts/workout-details.hbs', {exercise: foundWorkout, routines})
     })
     .catch((err) => {
         console.log(err)

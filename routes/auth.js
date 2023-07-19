@@ -27,7 +27,7 @@ router.post("/signup", (req, res, next) => {
         })
         .then((createdUser) => {
         console.log("Created user:", createdUser)
-        res.redirect("/login")
+        res.redirect("/auth/login")
         })
         .catch((error) => {
         if (error.code === 11000) {

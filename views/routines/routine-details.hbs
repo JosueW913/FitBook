@@ -1,0 +1,25 @@
+<h1>Routine Details</h1>
+
+<div>
+    <p>Routine Name: {{routineName}}</p>
+    <p>Total Duration: {{duration}}</p>
+
+    {{#each exercises}}
+        <a href="/workouts/details/{{_id}}"><p>{{exerciseName}}</p></a>
+        <p>Reps: {{reps}}</p>
+    {{/each}}
+    {{!-- <p>Exercises: {{exercises}}</p> --}}
+    <br>
+    <p>Added by: {{username.username}}</p>
+</div>
+
+<hr>
+
+<div>
+    <form action="/routines/edit/{{_id}}" method="get">
+        <button type="submit">Edit Workout Routine</button>
+    </form>
+    <form action="/routines/delete/{{_id}}" method="get">
+        <button type="submit">Delete Workout Routine</button>
+    </form>
+</div>

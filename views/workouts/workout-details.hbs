@@ -1,26 +1,43 @@
 <h2>Exercise Details</h2>
 
 {{!-- <img src="{{imageUrl}}" alt="workout"> --}}
-<p>Exercise Type: {{exercise.workoutType}}</p>
-<p>Exercise: {{exercise.exerciseName}}</p>
-<p>Instructions: {{exercise.instructions}}</p>
-<p>Reps: {{exercise.reps}}</p>
-<p>Sets: {{exercise.sets}}</p>
-<p>Workout Duration: {{exercise.duration}} minutes</p>
-<br>
-<p>Added by: {{exercise.username.username}}</p>
+<div>
+    <p>Exercise Type: {{exercise.workoutType}}</p>
+    <p>Exercise: {{exercise.exerciseName}}</p>
+    <p>Instructions: {{exercise.instructions}}</p>
+    <p>Reps: {{exercise.reps}}</p>
+    <p>Sets: {{exercise.sets}}</p>
+    <p>Workout Duration: {{exercise.duration}} minutes</p>
+    <br>
+    <p>Added by: {{exercise.username.username}}</p>
+</div>
 
-<form action="" method="post">
+{{#if routines.0._id}}
+
+<form action="/routines/add-exercise/{{exercise._id}}/{{exercise.duration}}" method="post">
     <select name="routineName" id="routineName">
-        {{#each }}
+        {{#each routines}}
             <option value="{{_id}}">{{routineName}}</option>
         {{/each}}
     </select>
     <button type="submit">Add to Routine</button>
 </form>
 
+{{else}}
+
+    <p>Create routine in your profile to add exercise.</p>
+    <a href="/users/profile">Profile</a>
+
+{{/if}}
+
+
 <hr>
 
-<a href="/workouts/edit/{{_id}}">Edit Workout Routine</a>
-<a href="/workouts/delete/{{_id}}">Delete Workout Routine</a>
-
+<div>
+    <form action="/workouts/edit/{{exercise._id}}" method="get">
+        <button type="submit">Edit Exercise</button>
+    </form>
+    <form action="/workouts/delete/{{exercise._id}}" method="get">
+        <button type="submit">Delete Exercise</button>
+    </form>
+</div>
