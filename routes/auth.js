@@ -3,6 +3,7 @@ var router = express.Router();
 var bcrypt = require('bcryptjs');
 const salt = 10;
 const User = require('../models/User');
+const Routine = require('../models/Routine');
 
 router.get('/signup', (req, res, next) => {
     res.render('auth/signup.hbs')
@@ -61,12 +62,24 @@ router.post('/login', (req, res, next) => {
           return;
         } else if (
           bcrypt.compareSync(password, user.password)) {
+
+            Routine.find({
+                username: user._id
+            })
+            .then((foundRoutines) => {
+                console.log("routines", foundRoutines)
+                req.session.routines = foundRoutines
+                req.session.user = user  
+        
+                console.log("Session:", req.session)
+        
+                res.redirect('/users/profile')
+            })
+            .catch((err) => {
+                console.log(err)
+                next(err)
+            })
           
-          req.session.user = user  
-  
-          console.log("Session:", req.session)
-  
-          res.redirect('/')
         } else {
           console.log("Incorrect password.");
           res.render('auth/login.hbs', { errorMessage: 'User not found and/or password is incorrect.' });

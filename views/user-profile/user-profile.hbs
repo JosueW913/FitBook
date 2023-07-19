@@ -1,0 +1,24 @@
+<h1>Profile</h1>
+<h2>Welcome {{user.fullName}}</h2>
+
+{{#if routines.0.username}}
+
+    {{#each routines}}
+
+        <a href="/routines/routine-details/{{_id}}">{{routineName}}</a>
+
+    {{/each}}
+
+    {{else}}
+
+    <p>No routines yet</p>
+
+{{/if}}
+
+<form action="/routines/create-routine" method="post">
+    <input type="text" name="routineName">
+
+<button type="submit">Add Routine</button>
+</form>
+
+

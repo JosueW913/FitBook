@@ -1,0 +1,26 @@
+<h2>Exercise Details</h2>
+
+{{!-- <img src="{{imageUrl}}" alt="workout"> --}}
+<p>Exercise Type: {{exercise.workoutType}}</p>
+<p>Exercise: {{exercise.exerciseName}}</p>
+<p>Instructions: {{exercise.instructions}}</p>
+<p>Reps: {{exercise.reps}}</p>
+<p>Sets: {{exercise.sets}}</p>
+<p>Workout Duration: {{exercise.duration}} minutes</p>
+<br>
+<p>Added by: {{exercise.username.username}}</p>
+
+<form action="" method="post">
+    <select name="routineName" id="routineName">
+        {{#each }}
+            <option value="{{_id}}">{{routineName}}</option>
+        {{/each}}
+    </select>
+    <button type="submit">Add to Routine</button>
+</form>
+
+<hr>
+
+<a href="/workouts/edit/{{_id}}">Edit Workout Routine</a>
+<a href="/workouts/delete/{{_id}}">Delete Workout Routine</a>
+

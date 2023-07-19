@@ -1,0 +1,12 @@
+<h1>{{type}} Exercises</h1>
+
+{{#each exercises}}
+
+    <a href="/workouts/details/{{_id}}">
+        <p>{{exerciseName}}</p>  
+    </a>
+    <p>{{duration}} minutes</p>
+    <p>added by: {{username.username}}</p> 
+    <hr>
+
+{{/each}}

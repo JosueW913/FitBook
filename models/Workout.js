@@ -6,7 +6,6 @@ const workoutSchema = new Schema(
             type: String,
             enum: ["chest", "back", "arms", "legs", "abs", "cardio"],
             required: [true, 'Exercise is required.'],
-            unique: true
           },
           exerciseName: {
             type: String,
@@ -25,8 +24,9 @@ const workoutSchema = new Schema(
             type: Number,
             required: [true, 'Number of sets is required.']
           },
-          duration: Number
-    },
+          duration: Number,
+          username: {type: Schema.Types.ObjectId, ref: "User"},
+          },
     {
       timestamps: true
     }
