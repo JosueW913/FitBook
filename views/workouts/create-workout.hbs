@@ -1,0 +1,32 @@
+<h2>Add Workout Routine</h2>
+
+<form action="/workouts/create" method="post">
+
+    <label for="workoutType">Workout Type</label>
+    <select id="workoutType" type="text" name="workoutType">
+            <option value="chest">Chest</option>
+            <option value="back">Back</option>
+            <option value="arms">Arms</option>
+            <option value="legs">Legs</option>
+            <option value="abs">Abs</option>
+            <option value="cardio">Cardio</option>
+    </select>
+
+    <label for="exerciseName">Exercise Name</label>
+    <input id="exerciseName" type="text" name="exerciseName">
+
+    <label for="instructions">Instructions</label>
+    <input id="instructions" type="text" name="instructions">
+
+    <label for="reps">Exercise Reps</label>
+    <input id="reps" type="text" name="reps">
+
+    <label for="sets">Workout Sets</label>
+    <input id="sets" type="text" name="sets">
+
+    <label for="duration">Approx. Duration (minutes)</label>
+    <input id="duration" type="text" name="duration">
+
+    <button type="submit">Submit Routine</button>
+
+</form>

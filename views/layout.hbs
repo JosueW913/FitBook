@@ -8,19 +8,23 @@
 
     <nav>
 
-      <a href="/">Home</a>
-      <a href="/workouts">Workouts</a>
-      <a href="/workouts/create">Add Workout</a>
+      <div id="nav-links">
+        <a href="/">Home</a>
+        <a href="/workouts">Workouts</a>
+        <a href="/workouts/create">Add Workout</a>
+      </div>
 
-      <form action="/auth/signup" method="get">
-        <button type="submit">Signup</button>
-      </form>
-      <form action="/auth/logout" method="get">
-        <button type="submit">LogIn</button>
-      </form>
-      <form action="/auth/logout" method="get">
-        <button type="submit">LogOut</button>
-      </form>
+      <div id="nav-buttons">
+        <form action="/auth/signup" method="get">
+          <button type="submit">Signup</button>
+        </form>
+        <form action="/auth/login" method="get">
+          <button type="submit">Login</button>
+        </form>
+        <form action="/auth/logout" method="get">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
 
     </nav>
 

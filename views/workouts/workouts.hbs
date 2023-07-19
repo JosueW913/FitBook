@@ -1,0 +1,12 @@
+<h2>All Workout Routines</h2>
+
+{{#each workouts}}
+
+    <a href="/workouts/details/{{_id}}">
+        <p>{{workoutType}}</p>  
+    </a>
+    <p>{{duration}} minutes</p>
+    <p>added by: {{user.username}}</p> 
+    <hr>
+
+{{/each}}
