@@ -1,0 +1,9 @@
+<h1>All Routines</h1>
+
+    {{#each routines}}
+
+        <a href="/routines/routine-details/{{_id}}">{{routineName}}</a>
+        <p>Added by: {{username.username}}</p>
+        <hr>
+
+    {{/each}}

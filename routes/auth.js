@@ -31,7 +31,7 @@ router.post("/signup", (req, res, next) => {
         })
         .catch((error) => {
         if (error.code === 11000) {
-          console.log("Username must be unique. Username is already used. "); 
+          console.log("Username must be unique. Username is already in use. "); 
           res.status(500).render("auth/signup.hbs", {errorMessage: "Username and/or email already exists."});
         } else {
           next(error);

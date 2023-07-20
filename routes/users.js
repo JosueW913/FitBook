@@ -5,7 +5,6 @@ const User = require('../models/User');
 const Routine = require('../models/Routine')
 const isLoggedIn = require('../middleware/isLoggedIn');
 
-/* GET users listing. */
 router.get('/profile', isLoggedIn, (req, res, next) => {
 
   User.findById(req.session.user._id)

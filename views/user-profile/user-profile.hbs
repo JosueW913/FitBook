@@ -1,5 +1,15 @@
-<h1>Profile</h1>
-<h1>Hello {{user.fullName}}</h2>
+
+{{#if user.fullName}}
+
+    <h1>Hello {{user.fullName}}, lets get fit!</h2>
+
+    {{else}}
+
+    <h1>Hello {{user.username}}, lets get fit!!</h2>
+
+{{/if}}
+
+<h2>Profile</h2>
 
 <h2>My Workout Routines</h2>
 

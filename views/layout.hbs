@@ -2,36 +2,46 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
 
-    <nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiar bg-dark border-bottom border-bottom-dary">
 
-      <div id="nav-links">
-        <a href="/">Home</a>
-        <a href="/workouts">Exercises</a>
-        <a href="/workouts/create">Add Exercise</a>
-        <a href="/routines">Routines</a>
-        <a href="/users/profile">Profile</a>
+      <div  class="container-fluid">
+
+          <div id="nav-links">
+            <a class="nav-item" href="/">Home</a>
+            <a class="nav-item" href="/workouts">Exercises</a>
+            <a href="/workouts/create">Add Exercise</a>
+            <a href="/routines/all-routines">All Routines</a>
+            <a href="/users/profile">Profile</a>
+          </div>
+
+          <div id="nav-buttons">
+            <form class="me-2" action="/auth/signup" method="get">
+              <button class="btn btn-outline-success" type="submit">Signup</button>
+            </form>
+            <form class="me-2"  action="/auth/login" method="get">
+              <button type="submit">Login</button>
+            </form>
+            <form class="me-2"  action="/auth/logout" method="get">
+              <button type="submit">Logout</button>
+            </form>
+          </div>
+
+
       </div>
 
-      <div id="nav-buttons">
-        <form action="/auth/signup" method="get">
-          <button type="submit">Signup</button>
-        </form>
-        <form action="/auth/login" method="get">
-          <button type="submit">Login</button>
-        </form>
-        <form action="/auth/logout" method="get">
-          <button type="submit">Logout</button>
-        </form>
-      </div>
 
     </nav>
 
 
 
     {{{body}}}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>

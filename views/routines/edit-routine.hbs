@@ -1,0 +1,11 @@
+<h1>Edit Routine</h1>
+
+<a href='/routines/routine-details/{{routine._id}}'><h2>{{routineName}}</h2></a>
+
+{{#each exercises}}
+
+    <form action="/routines/remove-exercise/{{index}}/{{routineId}}" method="get">
+        <a href="/workouts/details/{{_id}}">{{exerciseName}}</a> <button type="submit">Remove</button>
+    </form>
+
+{{/each}}
