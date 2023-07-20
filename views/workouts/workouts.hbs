@@ -1,11 +1,31 @@
 <h2>Exercise Types</h2>
 
-<a href="/workouts/type/chest">Chest</a>
-<a href="/workouts/type/back">Back</a>
-<a href="/workouts/type/arms">Arms</a>
-<a href="/workouts/type/legs">Legs</a>
-<a href="/workouts/type/abs">Abs</a>
-<a href="/workouts/type/cardio">Cardio</a>
+<div>
+    <form action="/workouts/type/chest" method="get">
+        <button class="me-2 btn btn-light" type="submit"><img src="https://cdn.icon-icons.com/icons2/2353/PNG/512/chest_male_body_icon_143226.png" alt="chestIcon">Chest Exercises</button>
+    </form>
+    <form class="me-2" action="/workouts/type/back" method="get">
+        <button class="me-2 btn btn-light" type="submit"><img src="https://cdn.icon-icons.com/icons2/2353/PNG/512/back_male_body_icon_143224.png" alt="backIcon">Back Exercises</button>
+    </form>
+    <form class="me-2" action="/workouts/type/arms" method="get">
+        <button class="me-2 btn btn-light" type="submit"><img src="https://cdn.icon-icons.com/icons2/2353/PNG/512/arm_muscle_male_body_icon_143229.png" alt="armIcon">Arm Exercises</button>
+    </form>
+    <form class="me-2" action="/workouts/type/legs" method="get">
+        <button class="me-2 btn btn-light" type="submit"><img src="https://cdn.icon-icons.com/icons2/2353/PNG/512/leg_muscle_body_icon_143225.png" alt="legIcon">Leg Exercises</button>
+    </form>
+    <form class="me-2" action="/workouts/type/abs" method="get">
+        <button class="me-2 btn btn-light" type="submit"><img src="https://cdn.icon-icons.com/icons2/2865/PNG/512/abs_fitness_icon_181759.png" alt="absIcon">Ab Exercises</button>
+    </form>
+    <form class="me-2" action="/workouts/type/cardio" method="get">
+        <button class="me-2 btn btn-light" type="submit"><img src="https://cdn.icon-icons.com/icons2/2487/PNG/512/cardio_workout_icon_150073.png" alt="cardioIcon">Cardio Exercises</button>
+    </form>
+    {{!-- <a href="/workouts/type/chest">Chest</a> --}}
+    {{!-- <a href="/workouts/type/back">Back</a>
+    <a href="/workouts/type/arms">Arms</a>
+    <a href="/workouts/type/legs">Legs</a>
+    <a href="/workouts/type/abs">Abs</a>
+    <a href="/workouts/type/cardio">Cardio</a> --}}
+</div>
 
 {{!-- {{#each workouts}}
 
