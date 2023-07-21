@@ -99,8 +99,8 @@ router.get("/remove-exercise/:index/:routineId", (req, res, next) => {
     Routine.findById(req.params.routineId)
         .populate('exercises')
         .then((updatedRoutine) => {
-            updatedRoutine.exercises.splice(index, 1)
             updatedRoutine.duration -= updatedRoutine.exercises[index].duration
+            updatedRoutine.exercises.splice(index, 1)
             updatedRoutine.save()
             console.log("updated routine", updatedRoutine)
             res.redirect(`/routines/edit/${updatedRoutine._id}`)
