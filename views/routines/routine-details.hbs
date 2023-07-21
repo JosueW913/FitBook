@@ -1,8 +1,10 @@
-<h1>Routine Details</h1>
+<h1 class="m-3 fw-bold text-white">Routine Details</h1>
 
 <div>
-    <p>Routine Name: {{routine.routineName}}</p>
-    <p>Total Duration: {{routine.duration}}</p>
+    <h5 class="fw-bold">Routine Name: {{routine.routineName}}</h5>
+    <h6>Total Duration: {{routine.duration}}</h6>
+    <br>
+    <br>
 
     {{#each routine.exercises}}
         <a href="/workouts/details/{{_id}}"><p>{{exerciseName}}</p></a>
@@ -17,12 +19,12 @@
 
 {{#if isOwner}}
 
-<div>
+<div class="d-flex">
     <form action="/routines/edit/{{routine._id}}" method="get">
-        <button type="submit">Edit Workout Routine</button>
+        <button class="m-1 btn btn-light btn-outline-dark" type="submit">Edit Workout Routine</button>
     </form>
     <form action="/routines/delete/{{routine._id}}" method="get">
-        <button type="submit">Delete Workout Routine</button>
+        <button class="m-1 btn btn-dark btn-outline-light" type="submit">Delete Workout Routine</button>
     </form>
 </div>
 

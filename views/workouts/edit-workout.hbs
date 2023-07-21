@@ -1,32 +1,35 @@
-<h2>Edit Exercise</h2>
+<div class="container">
+    <h1 class="m-3 fw-bold text-white">Edit Exercise</h1>
 
-<form action="/workouts/edit/{{_id}}" method="post">
+    <form action="/workouts/edit/{{_id}}" method="post">
 
-    <label for="workoutType">Workout Type</label>
-    <select id="workoutType" type="text" name="workoutType" value="{{workoutType}}">
-            <option value="chest">Chest</option>
-            <option value="back">Back</option>
-            <option value="arms">Arms</option>
-            <option value="legs">Legs</option>
-            <option value="abs">Abs</option>
-            <option value="cardio">Cardio</option>
-    </select>
+        <label for="workoutType">Workout Type</label>
+        <select id="workoutType" type="text" name="workoutType" value="{{workoutType}}">
+                <option value="chest">Chest</option>
+                <option value="back">Back</option>
+                <option value="arms">Arms</option>
+                <option value="legs">Legs</option>
+                <option value="abs">Abs</option>
+                <option value="cardio">Cardio</option>
+        </select>
+            <br>
+            <br>
+        <label class="form-label" for="exerciseName">Exercise Name</label>
+        <input class="form-control" id="exerciseName" type="text" name="exerciseName" value="{{exerciseName}}">
 
-    <label for="exerciseName">Exercise Name</label>
-    <input id="exerciseName" type="text" name="exerciseName" value="{{exerciseName}}">
+        <label class="form-label" for="instructions">Instructions</label>
+        <input class="form-control" id="instructions" type="text" name="instructions" value="{{instructions}}">
 
-    <label for="instructions">Instructions</label>
-    <input id="instructions" type="text" name="instructions" value="{{instructions}}">
+        <label class="form-label" for="reps">Exercise Reps</label>
+        <input class="form-control" id="reps" type="text" name="reps" value="{{reps}}">
 
-    <label for="reps">Exercise Reps</label>
-    <input id="reps" type="text" name="reps" value="{{reps}}">
+        <label class="form-label" for="sets">Exercise Sets</label>
+        <input class="form-control" id="sets" type="text" name="sets" value="{{sets}}">
 
-    <label for="sets">Exercise Sets</label>
-    <input id="sets" type="text" name="sets" value="{{sets}}">
+        <label class="form-label" for="duration">Approx. Duration (minutes)</label>
+        <input class="form-control" id="duration" type="text" name="duration" value="{{duration}}">
 
-    <label for="duration">Approx. Duration (minutes)</label>
-    <input id="duration" type="text" name="duration" value="{{duration}}">
+        <button class="m-1 btn btn-light btn-outline-dark" type="submit">Submit Exercise</button>
 
-    <button type="submit">Submit Exercise</button>
-
-</form>
+    </form>
+</div>
