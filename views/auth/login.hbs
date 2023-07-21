@@ -1,17 +1,23 @@
-<div >
-  <h2>Login</h2>
-  <form action="/auth/login" method="POST">
+<div class="container">
 
-    <label for="email">Email</label>
-    <input id="email" type="text" name="email"/>
+    <div class="p-3 text-center ">
+        <h2>Login</h2>
+    </div>
 
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password"/>
+    <div>
+        <form action="/auth/login" method="POST">
+        <label class="form-label"  for="email">Email</label>
+        <input class="form-control" id="email" type="text" name="email"/>
+            <br>
+        <label class="form-label"  for="password">Password</label>
+        <input class="form-control" id="password" type="password" name="password"/>
 
-    <button type="submit">Login</button>
+        <button type="submit">Login</button>
 
-    {{#if errorMessage}}
-      <p>{{errorMessage}}</p>
-    {{/if}}
-  </form>
+        {{#if errorMessage}}
+            <p>{{errorMessage}}</p>
+        {{/if}}
+        </form>
+    </div>
+
 </div>

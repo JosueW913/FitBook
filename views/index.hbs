@@ -1,2 +1,31 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container min-vh-100 d-flex justify-content-center align-items-center text-white bg-dark border border-white rounded-circle w-50">
+
+    <div class="p-3 text-center ">
+        <h1>{{title}}.</h1>
+        <p>A community where we can join our fitness journeys.</p>
+    </div>
+
+    <div>
+        <form action="/auth/login" method="POST">
+
+            <label for="email" class="form-label">Email</label>
+            <input class="form-control" id="email" type="text" name="email"/>
+                <br>
+            <label for="password" class="form-label">Password</label>
+            <input class="form-control" id="password" type="password" name="password"/>
+
+            <button class="m-1 btn btn-outline-success" type="submit">Login</button>
+
+            {{#if errorMessage}}
+            <p>{{errorMessage}}</p>
+            {{/if}}
+        </form>
+        <div>
+            <form class="m-1" action="/auth/signup" method="get">
+                <button class="btn btn-outline-success" type="submit">Signup</button>
+            </form>
+        </div>   
+
+    </div>
+
+</div>

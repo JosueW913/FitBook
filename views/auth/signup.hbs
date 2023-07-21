@@ -1,23 +1,29 @@
-<div >
-  <h2>Signup for FitBook</h2>
-  <form action="/auth/signup" method="POST">
+<div class="container">
+  
+  <div class="p-3 text-center ">
+     <h2>Signup for FitBook</h2>
+  </div>
 
-    <label for="username">Username</label>
-    <input id="username" type="text" name="username"/>
+  <div>
+    <form action="/auth/signup" method="POST">
 
-    <label for="email">Email</label>
-    <input id="email" type="text" name="email"/>
+        <label class="form-label"  for="username">Username</label>
+        <input class="form-control" id="username" type="text" name="username"/>
+            
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" id="email" type="text" name="email"/>
+            
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" id="password" type="password" name="password"/>
+        
+        <label class="form-label" for="fullName">Full Name</label>
+        <input class="form-control" id="fullName" type="text" name="fullName"/>
+            
+        <button class="m-2" type="submit">Signup</button>
 
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password"/>
-
-    <label for="fullName">Full Name</label>
-    <input id="fullName" type="text" name="fullName"/>
-
-    <button type="submit">Signup</button>
-
-    {{#if errorMessage}}
-      <p>{{errorMessage}}</p>
-    {{/if}}
-  </form>
+        {{#if errorMessage}}
+        <p>{{errorMessage}}</p>
+        {{/if}}
+    </form>
+  </div>
 </div>

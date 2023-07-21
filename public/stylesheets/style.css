@@ -1,19 +1,38 @@
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:url('https://cdn.create.vista.com/api/media/small/12582372/stock-photo-gym-room') no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 a {
   color: #00B7FF;
 }
 
-#nav-links {
-  width: 50vw;
-  display: inline-flex;
-  justify-content: space-between;
+img.butn {
+  width: 14vw;
+  margin-top: 1vw;
 }
 
-#nav-buttons {
-  display: inline-flex;
-  justify-content: space-between;
+div.p-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.bodys {
+  margin-left: 3%;
+}
+
+/* #navbarNav {
+  display: flex;
+  justify-content: space-around;
+} */
+
+#navUl {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
